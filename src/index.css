@@ -5,9 +5,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  text-align: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1{
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+h2{
+  color: white;
+}
+
+.CountryDiv {
+  border-color: white;
+  border-radius: 5px;
+  border-width: 2px;
 }
