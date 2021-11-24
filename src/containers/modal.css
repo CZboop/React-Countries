@@ -7,18 +7,10 @@
   background: rgba(0, 0, 0, 0.6);
 }
 
-.modal-main {
-  position:fixed;
-  background: white;
-  width: 80%;
-  height: auto;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-}
-
 .display-block {
   display: block;
+  overflow:auto;
+  background: black;
 }
 
 .display-none {

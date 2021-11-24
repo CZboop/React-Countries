@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import CountriesContainer from './containers/CountriesContainer';
 import Dashboard from './components/Dashboard'
 
 function App() {
