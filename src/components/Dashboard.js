@@ -1,14 +1,15 @@
 import React, { Component, useState } from "react";
+import CountriesContainer from "../containers/CountriesContainer";
 
 const Dashboard = () =>{
     const [show, setShow] = useState(false);
 
-    showCountriesContainer = () => {
-        this.setState({ show: true });
+    const showCountriesContainer = () => {
+        setShow(true);
     };
 
-    hideCountriesContainer = () => {
-        this.setState({ show: false });
+    const hideCountriesContainer = () => {
+        setShow(false);
     };
 
     return(
