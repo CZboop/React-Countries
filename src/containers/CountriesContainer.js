@@ -1,6 +1,7 @@
 import CountriesList from '../components/CountriesList';
 import { useState, useEffect } from 'react';
 import "./modal.css";
+import Dashboard from '../components/Dashboard';
 
 const CountriesContainer = ({handleClose, show}) => {
 

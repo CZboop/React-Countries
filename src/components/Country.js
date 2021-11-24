@@ -10,6 +10,9 @@ const Country = ({country}) => {
             <p>Population: {country.population.toLocaleString()}</p>
             <p>Flag: <br/><img src={country.flags.png}></img></p>
 
+            <button> Want to Visit </button>
+            <button> Visited </button>
+
         </div>
     )
 
