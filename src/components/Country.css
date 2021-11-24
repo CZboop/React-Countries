@@ -1,0 +1,16 @@
+.CountryDiv {
+    border-radius: 10px;
+    border-color: white;
+    border-width: 2px;
+    width: 50%;
+    padding: 2em;
+    border-style: solid;
+    margin: auto;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+img {
+    max-width: 25%;
+    padding: 2em;
+}
