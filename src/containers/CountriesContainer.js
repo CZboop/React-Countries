@@ -14,19 +14,17 @@ const CountriesContainer = ({handleClose, show}) => {
     }, []);
 
     return (
-        countries.length > 0 ?
         <div className={showHideCountriesContainer}>
             <section classname="modal-main">
                 <button type="button" onClick={handleClose}>Close</button>
-                <>
+                {countries.length > 0 ?
                 <CountriesList countries={countries}/>
-                </>
+                :
+                <p>Loading...</p>}
+            
             </section>
         </div>
-        :
-                <>
-                <p>Loading...</p>
-                </>
+
     )
 
 }
