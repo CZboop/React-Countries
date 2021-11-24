@@ -1,0 +1,25 @@
+import React, { Component, useState } from "react";
+
+const Dashboard = () =>{
+    const [show, setShow] = useState(false);
+
+    showCountriesContainer = () => {
+        this.setState({ show: true });
+    };
+
+    hideCountriesContainer = () => {
+        this.setState({ show: false });
+    };
+
+    return(
+        <div>
+            <CountriesContainer show={this.state.show} handleClose={this.hideCountriesContainer}/>
+            <button type="button" onClick={this.showModal}>
+            Open
+            </button>
+        </div>
+    );
+
+}
+
+export default Dashboard

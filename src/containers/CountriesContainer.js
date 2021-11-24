@@ -1,9 +1,11 @@
 import CountriesList from '../components/CountriesList';
 import { useState, useEffect } from 'react';
+import "./modal.css";
 
-const CountriesContainer = () => {
+const CountriesContainer = ({handleClose, show}) => {
 
     const [countries, setCountries] = useState([]);
+    const showHideCountriesContainer = show ? "modal display-block" : "modal display-none";
 
     const getCountryData = () => {
         fetch("https://restcountries.com/v3.1/all")
@@ -18,15 +20,21 @@ const CountriesContainer = () => {
     }, []);
 
     return (
-        
         countries.length > 0 ?
-        <>
-        <CountriesList countries={countries}/>
-        </>
+        <div className={showHideCountriesContainer}>
+            <section classname="modal-main">
+                
+                <>
+                <CountriesList countries={countries}/>
+                </>
+                
+                <button type="button" onClick={handleClose}>Close</button>
+            </section>
+        </div>
         :
-        <>
-        <p>Loading...</p>
-        </>
+                <>
+                <p>Loading...</p>
+                </>
     )
 
 }
