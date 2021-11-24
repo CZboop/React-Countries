@@ -13,8 +13,8 @@ const Dashboard = () =>{
 
     return(
         <div>
-            <CountriesContainer show={this.state.show} handleClose={this.hideCountriesContainer}/>
-            <button type="button" onClick={this.showModal}>
+            <CountriesContainer show={show} handleClose={hideCountriesContainer}/>
+            <button type="button" onClick={showCountriesContainer}>
             Open
             </button>
         </div>
