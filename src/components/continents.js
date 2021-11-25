@@ -7,7 +7,7 @@ import europe_filled from "../images/Europe_filled.jpg"
 import northamerica_empty from "../images/NorthAmerica2.jpg"
 import northamerica_filled from "../images/NorthAmerica2_filled.jpg"
 import southamerica_empty from "../images/SouthAmerica.jpg"
-import southamerica_filled from "../images/SouthAmerica.jpg"
+import southamerica_filled from "../images/SouthAmerica_filled.jpg"
 import oceania_empty from "../images/Oceania.jpg"
 import oceania_filled from "../images/Oceania_filled.jpg"
 

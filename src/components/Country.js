@@ -8,10 +8,10 @@ const Country = ({country}) => {
             <p>Capital: {country.capital}</p>
             <p>Continent: {country.continents}</p>
             <p>Population: {country.population.toLocaleString()}</p>
-            <p>Flag: <br/><img src={country.flags.png} alt={`flag of ${country.name}`}></img></p>
+            <p>Flag: <br/><img className="flag" src={country.flags.png} alt={`flag of ${country.name}`}></img></p>
 
-            <button> Want to Visit </button>
-            <button> Visited </button>
+            <button className="visitButton"> Want to Visit </button>
+            <button className="visitButton"> Visited </button>
 
         </div>
     )

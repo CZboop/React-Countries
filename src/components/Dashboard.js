@@ -14,16 +14,12 @@ const Dashboard = () =>{
     const hideCountriesContainer = () => {
         setShow(false);
     };
-    const fillOnHover = (id) => {
-        const continentToUpdate = continents.find(continent => continent.id === id);
-        continentToUpdate.filled = true;
-    }
 
     return(
         <div>
             <CountriesContainer show={show} handleClose={hideCountriesContainer} />
             <div className="ContinentList">
-            <ContinentList  fillOnHover={fillOnHover}/>
+            <ContinentList  continents={continents}/>
             </div>
         </div>
     );

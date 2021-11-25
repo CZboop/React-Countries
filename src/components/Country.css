@@ -10,12 +10,12 @@
     margin-top: 2em;
 }
 
-img {
+.flag {
     max-width: 25%;
     padding: 2em;
 }
 
-button{
+.visitButton{
     border-color: white;
     background-color: black;
     color: white;
