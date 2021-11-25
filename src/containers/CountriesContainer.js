@@ -16,7 +16,7 @@ const CountriesContainer = ({handleClose, show, selectedContinent}) => {
     return (
         <div className={showHideCountriesContainer}>
             <section classname="modal-main">
-                <button type="button" onClick={handleClose}>Close</button>
+                <button type="button" className="countriesButton" onClick={handleClose}>Close</button>
                 {countries.length > 0 ?
                 <CountriesList countries={countries} selectedContinent={selectedContinent}/>
                 :
