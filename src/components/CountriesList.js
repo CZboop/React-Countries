@@ -1,7 +1,7 @@
 import Country from '../components/Country'
 
-const CountriesList = ({countries}) => {
-    const countryComponents = countries.map( (country) => {
+const CountriesList = ({countries, selectedContinent}) => {
+    const countryComponents = countries.filter(country=>country.continents.includes(selectedContinent)).map( (country) => {
         return (
             <Country country={country} key={country.id} />
         )

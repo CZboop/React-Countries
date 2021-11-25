@@ -6,6 +6,7 @@ import './Continent.css'
 
 const Dashboard = () =>{
     const [show, setShow] = useState(false);
+    const [selected, setSelected] = useState(null);
 
     const showCountriesContainer = () => {
         setShow(true);
@@ -15,11 +16,15 @@ const Dashboard = () =>{
         setShow(false);
     };
 
+    const setSelectedContinent = (clickedContinent) => {
+        setSelected(clickedContinent)
+    }
+
     return(
         <div>
-            <CountriesContainer show={show} handleClose={hideCountriesContainer} />
+            <CountriesContainer show={show} handleClose={hideCountriesContainer}  selectedContinent={selected} />
             <div className="ContinentList">
-            <ContinentList  continents={continents}/>
+            <ContinentList  continents={continents} showCountriesContainer={showCountriesContainer} setSelectedContinent={setSelectedContinent}/>
             </div>
         </div>
     );

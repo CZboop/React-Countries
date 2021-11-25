@@ -1,7 +1,7 @@
 import showCountriesContainer from "./Dashboard"
 import { useState } from "react"
 
-const Continent = ({continent}) => {
+const Continent = ({continent, showCountriesContainer, setSelectedContinent}) => {
 
     const [img, setImg] = useState(continent.image_empty)
 
@@ -13,8 +13,13 @@ const Continent = ({continent}) => {
         }
     }
 
+    const handleClick = (chosenContinent) => {
+        showCountriesContainer();
+        setSelectedContinent(chosenContinent)
+    }
+
     return(
-        <button type="button" className="continentButton" onClick={showCountriesContainer}>
+        <button type="button" className="continentButton" onClick={() => handleClick(continent.continent_name)}>
             <img className="continentImage" src={img} onMouseEnter={() => fillOnHover()} onMouseLeave={() => fillOnHover()}/>
         </button>
     )
