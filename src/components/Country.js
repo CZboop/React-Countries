@@ -1,8 +1,8 @@
 import './Country.css';
 
-const Country = ({country}) => {
+const Country = ({country, onVisit}) => {
     return (
-        <div className="CountryDiv">
+        <div className={country.visited==true?  "VisitedCountry": "CountryDiv" }>
             <h2>{country.name.common}</h2>
             <hr/>
             <p>Capital: {country.capital}</p>
@@ -10,8 +10,8 @@ const Country = ({country}) => {
             <p>Population: {country.population.toLocaleString()}</p>
             <p>Flag: <br/><img className="flag" src={country.flags.png} alt={`flag of ${country.name}`}></img></p>
 
-            <button className="countriesButton"> Want to Visit </button>
-            <button className="countriesButton"> Visited </button>
+            <button className="countriesButton" > Want to Visit </button>
+            <button className="countriesButton" onClick={() => {onVisit(country.name.common)}}> Visited </button>
 
         </div>
     )

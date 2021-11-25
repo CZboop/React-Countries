@@ -20,6 +20,8 @@ const Dashboard = () =>{
         setSelected(clickedContinent)
     }
 
+   
+
     return(
         <div>
             <CountriesContainer show={show} handleClose={hideCountriesContainer}  selectedContinent={selected} />

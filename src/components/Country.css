@@ -9,6 +9,18 @@
     margin-bottom: 2em;
     margin-top: 2em;
 }
+.VisitedCountry{
+    border-radius: 10px;
+    background-color: green;
+    border-color: white;
+    border-width: 2px;
+    width: 50%;
+    padding: 2em;
+    border-style: solid;
+    margin: auto;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
 
 .flag {
     max-width: 25%;
