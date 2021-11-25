@@ -1,4 +1,4 @@
-import showCountriesContainer from "./Dashboard"
+import showCountriesContainer from "../Dashboard"
 import { useState } from "react"
 
 const Continent = ({continent, showCountriesContainer, setSelectedContinent}) => {

@@ -1,4 +1,4 @@
-import CountriesList from '../components/CountriesList';
+import CountriesList from '../components/countries/CountriesList';
 import { useState, useEffect } from 'react';
 import "./modal.css";
 
@@ -6,17 +6,6 @@ const CountriesContainer = ({handleClose, show, selectedContinent, onVisit}) => 
 
     const [countries, setCountries] = useState([]);
     const showHideCountriesContainer = show ? "modal display-block" : "modal display-none";
-
-    for (let i of countries) {
-        i["visited"] = false;
-    }
-
-    const updateVisit = (name) =>{
-        const countryToUpdate = countries.find(country => country.name.common === name);
-        console.log(countryToUpdate)
-        countryToUpdate.visited = true;
-        console.log(countryToUpdate)
-    }
     
 
     useEffect( () => {
@@ -28,9 +17,9 @@ const CountriesContainer = ({handleClose, show, selectedContinent, onVisit}) => 
     return (
         <div className={showHideCountriesContainer}>
             <section classname="modal-main">
-                <button type="button" className="countriesButton" onClick={handleClose}>Close</button>
+                <button type="button" className="globalButton" onClick={handleClose}>Close</button>
                 {countries.length > 0 ?
-                <CountriesList countries={countries} selectedContinent={selectedContinent} onVisit={updateVisit}/>
+                <CountriesList countries={countries} selectedContinent={selectedContinent}/>
                 :
                 <p>Loading...</p>}
             

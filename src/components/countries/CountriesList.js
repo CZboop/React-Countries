@@ -1,9 +1,9 @@
-import Country from '../components/Country'
+import Country from './Country'
 
-const CountriesList = ({countries, selectedContinent, onVisit}) => {
+const CountriesList = ({countries, selectedContinent}) => {
     const countryComponents = countries.filter(country=>country.continents.includes(selectedContinent)).map( (country) => {
         return (
-            <Country country={country} key={country.id} onVisit={onVisit}/>
+            <Country country={country} key={country.id}/>
         )
     })
     return (

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import CountriesContainer from "../containers/CountriesContainer";
-import ContinentList from "./ContinentList"
-import continents from './continents.js'
-import './Continent.css'
+import ContinentList from "./continents/ContinentList"
+import continents from './continents/continents.js'
+import './continents/Continent.css'
 
 const Dashboard = () =>{
     const [show, setShow] = useState(false);
@@ -24,6 +24,9 @@ const Dashboard = () =>{
 
     return(
         <div>
+            <button className="globalButton">Visited Countries</button>
+            <button className="globalButton">Want to visit</button>
+            <p>Select a continent to see list of countries</p>
             <CountriesContainer show={show} handleClose={hideCountriesContainer}  selectedContinent={selected} />
             <div className="ContinentList">
             <ContinentList  continents={continents} showCountriesContainer={showCountriesContainer} setSelectedContinent={setSelectedContinent}/>
