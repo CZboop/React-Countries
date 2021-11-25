@@ -18,7 +18,7 @@ const Country = ({country}) => {
             <p>Population: {country.population.toLocaleString()}</p>
             <p>Flag: <br/><img className="flag" src={country.flags.png} alt={`flag of ${country.name}`}></img></p>
 
-            <button className="globalButton" > Want to Visit </button>
+            <button className="globalButton"> Want to Visit </button>
             <button className="globalButton" onClick={updateVisit}> {visited ? "Not visited" : "Visited"} </button>
 
         </div>

@@ -2,7 +2,7 @@ import CountriesList from '../components/countries/CountriesList';
 import { useState, useEffect } from 'react';
 import "./modal.css";
 
-const CountriesContainer = ({handleClose, show, selectedContinent, onVisit}) => {
+const CountriesContainer = ({handleClose, show, selectedContinent}) => {
 
     const [countries, setCountries] = useState([]);
     const showHideCountriesContainer = show ? "modal display-block" : "modal display-none";
