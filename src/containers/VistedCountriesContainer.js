@@ -1,22 +1,22 @@
 import "./modal.css";
-import { useState, useEffect } from 'react';
-import CountriesList from "../components/countries/CountriesList";
+import Country from "../components/countries/Country";
 
 
-const VisitedCountriesContainer = ({CountriesList, handleClose, visitedShow}) => {
-    const [visitedCountries, setVisitedCountries] = useState([])
+const VisitedCountriesContainer = ({countries, handleClose, visitedShow, handleUpdateCountryVisited}) => {
     const showHideVisitedCountriesContainer = visitedShow ? "modal display-block" : "modal display-none";
 
-    useEffect( () => {
-        
-    }, []);
+    const visitedCountriesComponents = countries
+    .filter(country => country.visited == true)
+    .map(country => {return(
+        <Country country={country} key={country.id} handleUpdateCountryVisited={handleUpdateCountryVisited}/>
+    )})
 
     return(
         <div className={showHideVisitedCountriesContainer}>
             <section classname="modal-main">
                 <button type="button" className="globalButton" onClick={handleClose}>Close</button>
-                {visitedCountries.length > 0 ?
-                <p>{visitedCountries.map(country => country.name)}</p>
+                {visitedCountriesComponents.length > 0 ?
+                visitedCountriesComponents
                 :
                 <p>Loading...</p>}
             

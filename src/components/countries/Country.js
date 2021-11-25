@@ -1,16 +1,14 @@
 import './Country.css';
-import { useState } from 'react';
 
-const Country = ({country}) => {
+const Country = ({country, handleUpdateCountryVisited}) => {
 
-    const [visited, setVisited] = useState(false)
 
     const updateVisit = () => {
-        setVisited(!visited)
+        handleUpdateCountryVisited(country.name.common);
     }
 
     return (
-        <div className={visited ?  "VisitedCountry": "CountryDiv" }>
+        <div className={country.visited ?  "VisitedCountry": "CountryDiv" }>
             <h2>{country.name.common}</h2>
             <hr/>
             <p>Capital: {country.capital}</p>
@@ -19,7 +17,7 @@ const Country = ({country}) => {
             <p>Flag: <br/><img className="flag" src={country.flags.png} alt={`flag of ${country.name}`}></img></p>
 
             <button className="globalButton"> Want to Visit </button>
-            <button className="globalButton" onClick={updateVisit}> {visited ? "Not visited" : "Visited"} </button>
+            <button className="globalButton" onClick={updateVisit}> {country.visited ? "Not visited" : "Visited"} </button>
 
         </div>
     )
